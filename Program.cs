@@ -14,17 +14,13 @@ namespace Nadine
     {
         public static void Main(string[] args)
         {
-           
             ILoggerFactory loggerFactory = new LoggerFactory()
-                .AddConsole()
                 .AddDebug();
             ILogger logger = loggerFactory.CreateLogger<Program>();
-            logger.LogInformation(
-                "This is a test of the emergency broadcast system.");
+            logger.LogInformation("This is a test of the emergency broadcast system.");
+
 
             CreateWebHostBuilder(args).Build().Run();
-
-
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

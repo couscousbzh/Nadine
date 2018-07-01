@@ -11,14 +11,13 @@ namespace Nadine.Pages
 {
     public class CounterModel : PageModel
     {
+         ILogger<CounterModel> _logger;
+
         HubConnection connection;
                    
-        public void OnGet()
+        public async void OnGet()
         {
-
-        
-
-            FakeCounter();
+            await FakeCounter();
         }
 
         public async Task FakeCounter()
@@ -34,15 +33,14 @@ namespace Nadine.Pages
                 counter++;
                 
                 await Task.Delay(1000);
-
+                _logger.LogInformation( counter.ToString());
                 try
                 {
                     await connection.InvokeAsync("CounterUpdate", counter.ToString() );
                 }
                 catch (Exception ex)
                 {                
-                    //logger.LogInformation( counter.ToString());
-            
+                    _logger.LogError("Error : " + ex.Message );            
                 }
             }
 
