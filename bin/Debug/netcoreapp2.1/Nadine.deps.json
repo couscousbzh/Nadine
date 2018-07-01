@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "8d19439ef22c432fe18f0eac697c8789fe30c00a"
+    "signature": "9faf1494a0969155956eec527dedce9d3e505292"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "Nadine/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
+          "Microsoft.AspNetCore.SignalR.Client": "1.0.0",
           "Microsoft.NETCore.App": "2.1.0"
         },
         "runtime": {
@@ -32,6 +33,54 @@
         },
         "compile": {
           "Nadine.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Connections.Client/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Connections.Common": "1.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.18136"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Client/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Connections.Client": "1.0.0",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.18136"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Client.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Common": "1.0.1",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "1.0.1",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "System.Threading.Channels": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.18136"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -3155,6 +3204,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Connections.Client/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3sPR9p12pznel4ipia1Fzz50zs64dmPScvp1f2MQNcN4Oajy6X6XioSR7kg1sgj2/9NDzjy8f8HcGQuaJe+X9g==",
+      "path": "microsoft.aspnetcore.http.connections.client/1.0.0",
+      "hashPath": "microsoft.aspnetcore.http.connections.client.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.SignalR.Client/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bLWEF9G0ZMZym4b1VUQcCStubqrRr3N1fO0Y6EP+Qp3fBTgqTWRckKaz+N7Oa1atfwwrPiWGWi2ZwYWq9QupwA==",
+      "path": "microsoft.aspnetcore.signalr.client/1.0.0",
+      "hashPath": "microsoft.aspnetcore.signalr.client.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.SignalR.Client.Core/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rsbJNAFs1af4JUyJNoOnxhoL1LEAE1i1FxlI0aFmLOprFyv/7pQx3CkIRqY9OWFNF/kb/456AA6wPjbPF1lhsQ==",
+      "path": "microsoft.aspnetcore.signalr.client.core/1.0.0",
+      "hashPath": "microsoft.aspnetcore.signalr.client.core.1.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",

@@ -11,6 +11,9 @@ namespace Nadine.Hubs
         {
             await Clients.All.SendAsync("CounterUpdate", message);
         }
+
+
+
         
     }
 }
