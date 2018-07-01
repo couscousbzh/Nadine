@@ -33,6 +33,17 @@ namespace Nadine
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddCors(options => options.AddPolicy("CorsPolicy", 
+            builder => 
+            {
+                builder.AllowAnyMethod().AllowAnyHeader()
+                       .WithOrigins("http://localhost:55830")
+                       .AllowCredentials();
+            }));
+
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +64,13 @@ namespace Nadine
             app.UseCookiePolicy();
 
             app.UseMvc();
+            
+            app.UseCors("CorsPolicy");
+
+            app.UseSignalR(route =>
+            {
+                route.MapHub<Hubs.ChatHub>("/chathub");
+            });
         }
     }
 }
