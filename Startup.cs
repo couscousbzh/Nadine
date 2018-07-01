@@ -59,7 +59,8 @@ namespace Nadine
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
@@ -70,6 +71,7 @@ namespace Nadine
             app.UseSignalR(route =>
             {
                 route.MapHub<Hubs.ChatHub>("/chathub");
+                route.MapHub<Hubs.CounterHub>("/counterhub");
             });
         }
     }
