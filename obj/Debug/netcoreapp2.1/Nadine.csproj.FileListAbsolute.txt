@@ -31,3 +31,8 @@ D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.dll
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.pdb
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.csproj.CopyComplete
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Counter.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Chat.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\TemplateTest.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Samples\CounterView.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.1.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Samples\CompleteSamplePage.g.cshtml.cs

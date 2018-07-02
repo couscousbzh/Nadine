@@ -9,11 +9,20 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.0" />
   </ItemGroup>
 
-  <!-- <Target Name="CopySignalR" BeforeTargets="AfterBuild">
+    <Target Name="CopyNodeModulesSignalR" BeforeTargets="Build">
       <ItemGroup>
         <SignalRJSClientFiles Include="$(MSBuildThisFileDirectory)node_modules\@aspnet\signalr\dist\browser\*" />
       </ItemGroup>
-      <Copy SourceFiles="@(SignalRJSClientFiles)" DestinationFolder="$(MSBuildThisFileDirectory)wwwroot\lib\signalr" />
-  </Target> -->
+      <Copy SourceFiles="@(SignalRJSClientFiles)" DestinationFolder="$(MSBuildThisFileDirectory)wwwroot\lib\signalr" />    
+    </Target>
+
+    <Target Name="CopyNodeModulesTemplateGentelella" BeforeTargets="Build">
+      <ItemGroup>
+        <GentelellaBuildFiles Include="$(MSBuildThisFileDirectory)node_modules\gentelella\build\**\*.*" />
+        <GentelellaVendorsFiles Include="$(MSBuildThisFileDirectory)node_modules\gentelella\vendors\**\*.*" />
+      </ItemGroup>
+      <Copy SourceFiles="@(GentelellaBuildFiles)" DestinationFolder="$(MSBuildThisFileDirectory)wwwroot\lib\gentelella\build\%(RecursiveDir)" />    
+      <Copy SourceFiles="@(GentelellaVendorsFiles)" DestinationFolder="$(MSBuildThisFileDirectory)wwwroot\lib\gentelella\vendors\%(RecursiveDir)" />    
+    </Target>
 
 </Project>

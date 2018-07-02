@@ -50,7 +50,7 @@ using Nadine;
             WriteLiteral("<div class=\"container\">\r\n    <div class=\"row\"></div>\r\n    <div class=\"row\">\r\n        <div class=\"col-6\">Counter &nbsp;</div>\r\n        <div class=\"col-6\">\r\n            <ul id=\"messagesList\"></ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
             EndContext();
             BeginContext(260, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "efc29e7422424eeca95f62cc09bff720", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99a8147764a84130a0112254ad0d2624", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -68,7 +68,7 @@ using Nadine;
             WriteLiteral("    \r\n");
             EndContext();
             BeginContext(314, 39, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "721653cea7e74497a9daa48b9776da86", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ac4dfebeab34b9e957046f9f8745cb6", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

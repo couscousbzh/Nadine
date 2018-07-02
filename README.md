@@ -11,5 +11,18 @@ Then, I add a Counter Page. The goal of this is to simulate a counter (like a bo
 
 
 
+Template Gentelella : https://github.com/puikinsh/gentelella
+
+
+
+
+npm init -y
+npm install @aspnet/signalr
+npm install gentelella --save
+
+dotnet build
+
+
+
 
 
