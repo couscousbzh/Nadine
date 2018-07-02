@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-
 namespace Nadine
 {
     public class Startup
@@ -33,15 +32,8 @@ namespace Nadine
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
-           
-
-           
-
-            
-            services.AddLogging();
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+        
 
             services.AddCors(options => options.AddPolicy("CorsPolicy", 
             builder => 
@@ -53,11 +45,11 @@ namespace Nadine
 
             services.AddSignalR();
 
-
+            services.AddLogging();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -83,6 +75,13 @@ namespace Nadine
                 route.MapHub<Hubs.ChatHub>("/chathub");
                 route.MapHub<Hubs.CounterHub>("/counterhub");
             });
+
+
+            loggerFactory.AddDebug();
+            //start logging to the console
+            // var logger = loggerFactory.CreateLogger<Startup>();
+            // logger.LogInformation("##########################################################################################################################");
+
         }
     }
 }

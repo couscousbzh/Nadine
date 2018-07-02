@@ -11576,7 +11576,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.AspNetCore.SignalR.Client",
+      "Microsoft.AspNetCore.SignalR.Client >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -11605,7 +11605,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\Yann\\Source\\Workspaces\\Entities.Packages\\Main": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11630,7 +11629,7 @@
           },
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[1.0.0, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
@@ -11645,17 +11644,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1604",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "La dépendance du projet Microsoft.AspNetCore.SignalR.Client ne contient pas de limite inférieure inclusive. Incluez une limite inférieure dans la version de dépendance pour assurer des résultats de restauration cohérents.",
-      "libraryId": "Microsoft.AspNetCore.SignalR.Client",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }

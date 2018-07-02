@@ -5,7 +5,7 @@ const connection = new signalR.HubConnectionBuilder()
 
 connection.on("CounterUpdate", (message) => {
     console.debug("COucou Yann");
-    const encodedMsg = user + " says " + message;
+    const encodedMsg = message;
     const li = document.createElement("li");
     li.textContent = encodedMsg;
     document.getElementById("messagesList").appendChild(li);
