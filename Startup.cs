@@ -38,8 +38,8 @@ namespace Nadine
             builder => 
             {
                 builder.AllowAnyMethod().AllowAnyHeader()
-                       .WithOrigins("http://localhost:55830")
-                       .AllowCredentials();
+                    .WithOrigins("http://localhost:55830")
+                    .AllowCredentials();
             }));
 
             services.AddSignalR();
