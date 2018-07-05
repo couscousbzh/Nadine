@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+
+
 namespace Nadine
 {
     public class Startup
@@ -38,13 +40,15 @@ namespace Nadine
             builder => 
             {
                 builder.AllowAnyMethod().AllowAnyHeader()
-                    .WithOrigins("http://localhost:55830")
+                    .WithOrigins("http://localhost:5000")
                     .AllowCredentials();
             }));
 
             services.AddSignalR();
 
             services.AddLogging();
+
+            //services.AddHostedService<TimedHostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +67,7 @@ namespace Nadine
             //app.UseHttpsRedirection();
             
             app.UseStaticFiles();
+
             app.UseCookiePolicy();
 
             app.UseMvc();
@@ -75,12 +80,7 @@ namespace Nadine
                 route.MapHub<Hubs.CounterHub>("/counterhub");
             });
 
-
             loggerFactory.AddDebug();
-            //start logging to the console
-            // var logger = loggerFactory.CreateLogger<Startup>();
-            // logger.LogInformation("##########################################################################################################################");
-
         }
     }
 }

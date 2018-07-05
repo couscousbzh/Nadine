@@ -50,7 +50,7 @@ using Nadine;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  ");
             EndContext();
             BeginContext(46, 1401, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ec66673288445d1b678f80fd9fe6c55", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f75beed61b8847108d28609a0037e874", async() => {
                 BeginContext(52, 1388, true);
                 WriteLiteral(@"
     <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
@@ -99,7 +99,7 @@ using Nadine;
             WriteLiteral("\r\n\r\n  ");
             EndContext();
             BeginContext(1453, 48238, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa8988319e1a478b93c7c4cb425d3042", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8315b226e2b1451bada703f40407f748", async() => {
                 BeginContext(1474, 48210, true);
                 WriteLiteral(@"
     <div class=""container body"">
