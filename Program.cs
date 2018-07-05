@@ -16,36 +16,44 @@ namespace Nadine
     {
         public static void Main(string[] args)
         {
-            // var host = new HostBuilder()
-            //     .ConfigureHostConfiguration(configHost =>
-            //     {                    
-            //         configHost.SetBasePath(Directory.GetCurrentDirectory());
-            //         configHost.AddJsonFile("hostsettings.json", optional: true);
-            //         configHost.AddEnvironmentVariables(prefix: "PREFIX_");
-            //         configHost.AddCommandLine(args);
-            //     })
-            //     .ConfigureAppConfiguration((hostContext, configApp) =>
-            //     {
-            //         configApp.SetBasePath(Directory.GetCurrentDirectory());
-            //         configApp.AddJsonFile("appsettings.json", optional: true);
-            //         configApp.AddJsonFile($"appsettings.{hostContext.HostingEnvironment.EnvironmentName}.json", optional: true);
-            //         configApp.AddEnvironmentVariables(prefix: "PREFIX_");
-            //         configApp.AddCommandLine(args);
-            //     })
-            //     .ConfigureServices((hostContext, services) =>
-            //     {
-            //         services.AddLogging();
-            //         services.AddHostedService<TimedHostedService>();
-            //     })
-            //     ;
-                        
-            // host.Build().RunAsync();
+            var host = new HostBuilder()
+                .ConfigureHostConfiguration(configHost =>
+                {                    
+                    configHost.SetBasePath(Directory.GetCurrentDirectory());
+                    configHost.AddJsonFile("hostsettings.json", optional: true);
+                    configHost.AddEnvironmentVariables(prefix: "PREFIX_");
+                    configHost.AddCommandLine(args);
+                })
+                .ConfigureAppConfiguration((hostContext, configApp) =>
+                {
+                    configApp.SetBasePath(Directory.GetCurrentDirectory());
+                    configApp.AddJsonFile("appsettings.json", optional: true);
+                    configApp.AddJsonFile($"appsettings.{hostContext.HostingEnvironment.EnvironmentName}.json", optional: true);
+                    configApp.AddEnvironmentVariables(prefix: "PREFIX_");
+                    configApp.AddCommandLine(args);
+                })
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddLogging();
+                    services.AddHostedService<TimedHostedService>();
+                });
 
-            CreateWebHostBuilder(args).Build().Run();            
+            host.Build().RunAsync();
+
+            CreateWebHostBuilder(args).Build().Run();    
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) 
+        {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("hosting.json", optional: true)
+                .Build();
+
+            return WebHost.CreateDefaultBuilder(args)
+                //.UseKestrel()
+                .UseConfiguration(config)
                 .UseStartup<Startup>();
+        }       
     }
 }

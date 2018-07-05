@@ -40,7 +40,7 @@ namespace Nadine
             builder => 
             {
                 builder.AllowAnyMethod().AllowAnyHeader()
-                    .WithOrigins("http://localhost:5000")
+                    .WithOrigins("http://192.168.8.123:5000")
                     .AllowCredentials();
             }));
 

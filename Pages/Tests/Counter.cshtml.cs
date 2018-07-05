@@ -27,10 +27,10 @@ namespace Nadine.Pages
             Launch();            
         }
 
-        public async void Launch()
+        public void Launch()
         {
-            await InitHub();
-            await FakeCounter();
+            //await InitHub();
+            //await FakeCounter();
         }
 
         public async Task<bool> InitHub()

@@ -31,6 +31,8 @@ D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentP
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.1.g.cshtml.cs
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Tests\Chat.g.cshtml.cs
+D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Tests\Counter.g.cshtml.cs
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewStart.g.cshtml.cs
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.RazorTargetAssemblyInfo.cache
@@ -39,5 +41,3 @@ D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.Views.pdb
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.dll
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.pdb
 D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Nadine.csproj.CopyComplete
-D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Tests\Chat.g.cshtml.cs
-D:\Projets\Git\Nadine\obj\Debug\netcoreapp2.1\Razor\Pages\Tests\Counter.g.cshtml.cs
