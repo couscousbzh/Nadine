@@ -24,7 +24,7 @@ namespace Nadine
         {
             _logger.LogInformation("Timed Background Service is starting.");
             
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(5));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(1));
 
             return Task.CompletedTask;
         }

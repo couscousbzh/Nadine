@@ -18,7 +18,7 @@ namespace Nadine
         private bool DeviceReady = false;
         private IGpioPin pin17, pin22;
 
-        private int antiRebond = 20;//ms
+        private int antiRebond = 5;//ms
         private  DateTime dt1;
         private int stateChange;
         private string oldStatusPin17;
